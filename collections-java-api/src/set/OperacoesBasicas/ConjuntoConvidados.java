@@ -18,15 +18,15 @@ public class ConjuntoConvidados {
     public void removerConvidadoPorCodigoConvite(int codigoConvite) {
         Convidado convidadoParaRemover = null;
         if (!convidadosSet.isEmpty()) {
-        for (Convidado c : convidadosSet) {
-            if (c.getCodigoConvite() == codigoConvite) {
-            convidadoParaRemover = c;
-            break;
+            for (Convidado c : convidadosSet) {
+                if (c.getCodigoConvite() == codigoConvite) {
+                    convidadoParaRemover = c;
+                    break;
+                }
             }
-        }
-        convidadosSet.remove(convidadoParaRemover);
+            convidadosSet.remove(convidadoParaRemover);
         } else {
-        throw new RuntimeException("O conjunto está vazio!");
+            throw new RuntimeException("O conjunto está vazio!");
         }
     }
 
@@ -36,9 +36,9 @@ public class ConjuntoConvidados {
 
     public void exibirConvidados() {
         if (!convidadosSet.isEmpty()) {
-        System.out.println(convidadosSet);
+            System.out.println(convidadosSet);
         } else {
-        System.out.println("O conjunto está vazio!");
+            System.out.println("O conjunto está vazio!");
         }
     }
 
